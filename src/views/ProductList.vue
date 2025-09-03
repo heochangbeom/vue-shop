@@ -12,11 +12,7 @@
         </div>
       </div>
       <div class="row">
-        <div
-          class="col-xl-3 col-lg-4 col-md-6"
-          :key="i"
-          v-for="(product, i) in productList"
-        >
+        <div class="col-xl-3 col-lg-4 col-md-6" :key="i" v-for="(product, i) in productList">
           <div class="card" style="width: 18rem">
             <a @click="goToDetail(product.id)" style="cursor: pointer"
               ><img
@@ -73,9 +69,9 @@ export default {
   },
 
   methods: {
-    goToDetail(product_id) {
+        goToDetail(product_id) {
       this.$router.push({
-        name: "ProductDetail",
+        name: "Product",
         query: { product_id: product_id },
       });
     },
